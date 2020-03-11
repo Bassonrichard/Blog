@@ -1,0 +1,16 @@
+# This file is a template, and might need editing before it works on your project.
+image: node:9.8.0
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+
+pages:
+  script:
+  - npm install
+  - ./node_modules/.bin/gatsby build --prefix-paths
+  - node_modules/.bin/surge public little-black-book.surge.sh
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

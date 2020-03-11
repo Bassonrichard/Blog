@@ -1,0 +1,39 @@
+@import '../../layouts/theme.scss';
+
+.post-suggestions {
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    background-color: darken($md-tertiary-color, 5%);
+
+    .hide-on-mobile {
+        @media (max-width: 360px - 1px) {
+            display: none;
+        }
+    }
+
+    .post-suggestion {
+        @media (max-width: 400px - 1px) {
+            display: none;
+
+        }
+        display: flex;
+        align-items: center;
+        margin: 0 10%;
+        margin-bottom: 4%;
+        color: $md-secondary-color !important;
+
+        .headline-container {
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+
+        .arrow-nav {
+            margin-top: 10%;
+        }
+    }
+
+    .secondary-color {
+        color: $md-secondary-color !important;
+    }
+}
